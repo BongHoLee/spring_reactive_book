@@ -1,4 +1,4 @@
-package com.bong.reactive_1;
+package com.bong.reactive;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
