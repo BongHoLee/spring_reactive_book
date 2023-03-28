@@ -1,6 +1,6 @@
 package com.bong.reactive.server;
 
-import com.bong.reactive.Dish;
+import com.bong.reactive.domain.Dish;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

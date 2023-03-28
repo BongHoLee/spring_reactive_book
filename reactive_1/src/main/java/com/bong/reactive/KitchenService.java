@@ -1,6 +1,6 @@
 package com.bong.reactive;
 
-import com.bong.reactive.Dish;
+import com.bong.reactive.domain.Dish;
 import reactor.core.publisher.Flux;
 
 public class KitchenService {

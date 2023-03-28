@@ -1,8 +1,7 @@
-package com.bong.reactive;
+package com.bong.reactive.domain;
 
 
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 
 @EqualsAndHashCode
 public class Dish {

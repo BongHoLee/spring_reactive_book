@@ -1,6 +1,6 @@
 package com.bong.reactive.server;
 
-import com.bong.reactive.Dish;
+import com.bong.reactive.domain.Dish;
 import com.bong.reactive.KitchenService;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
