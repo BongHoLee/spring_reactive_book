@@ -1,0 +1,20 @@
+spring:
+  r2dbc:
+    host: localhost
+    database: bong
+    driver: pool
+    port: 3306
+    protocol: mysql
+    url: r2dbc:mysql://localhost:3306/bong # schema 이름을 webflux로 지었음
+    username: root
+    password: 1234
+
+# 추가 설정 - R2DBC에서 Database로 나가는 쿼리를 보고 싶으면 아래처럼 로깅레벨을 설정해야 함
+logging:
+  level:
+    root: INFO
+    sql: TRACE
+    web: TRACE
+    org.springframework.r2dbc.core: debug
+
+
