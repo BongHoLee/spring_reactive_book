@@ -8,3 +8,5 @@ pluginManagement {
 }
 
 include("reactive_1")
+include("reactive_2")
+
