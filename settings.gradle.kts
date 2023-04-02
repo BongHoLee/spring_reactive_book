@@ -7,6 +7,7 @@ pluginManagement {
 	}
 }
 
+include("r2dbc_example")
 include("reactive_1")
 include("reactive_2")
 
