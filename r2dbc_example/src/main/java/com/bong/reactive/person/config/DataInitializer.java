@@ -20,7 +20,7 @@ public class DataInitializer {
         databaseClient
                 .sql("INSERT INTO posts (id, title, content, metadata) VALUES (:id, :title, :content, :metadata)")
                 .bind("id", UUID.randomUUID().toString())
-                .bind("title", "my first post")
+                .bind("title", "my_first_post")
                 .bind("content", "content of my first post")
                 .bind("metadata", "{\"tags\":[\"spring\", \"r2dbc\"]}")
                 .fetch()
