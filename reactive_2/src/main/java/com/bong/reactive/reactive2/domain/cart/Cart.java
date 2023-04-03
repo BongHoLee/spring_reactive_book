@@ -1,15 +1,13 @@
-package com.bong.reactive.person.domain.cart;
+package com.bong.reactive.reactive2.domain.cart;
 
 import java.util.ArrayList;
 import java.util.List;
-import lombok.Builder;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Table("carts")
 @Getter
-@Builder
 public class Cart {
 
     @Id

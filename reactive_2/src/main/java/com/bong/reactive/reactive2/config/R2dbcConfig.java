@@ -1,4 +1,4 @@
-package com.bong.reactive.person.config;
+package com.bong.reactive.reactive2.config;
 
 import static io.r2dbc.spi.ConnectionFactoryOptions.DATABASE;
 import static io.r2dbc.spi.ConnectionFactoryOptions.DRIVER;
@@ -16,6 +16,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.r2dbc.config.AbstractR2dbcConfiguration;
 import org.springframework.data.r2dbc.config.EnableR2dbcAuditing;
+import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories;
 import org.springframework.r2dbc.connection.R2dbcTransactionManager;
 import org.springframework.transaction.ReactiveTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -23,11 +24,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableR2dbcAuditing
 @EnableTransactionManagement
+@EnableR2dbcRepositories(basePackages = {"com.bong.reactive.reactive2.repository.r2dbc"})
 public class R2dbcConfig extends AbstractR2dbcConfiguration {
 
-    private final DBProperties properties;
+    private final R2dbcDBProperties properties;
 
-    public R2dbcConfig(DBProperties properties) {
+    public R2dbcConfig(R2dbcDBProperties properties) {
         this.properties = properties;
     }
 
@@ -49,7 +51,7 @@ public class R2dbcConfig extends AbstractR2dbcConfiguration {
     }
 
     @Bean
-    public ReactiveTransactionManager transactionManager(ConnectionFactory connectionFactory) {
+    public ReactiveTransactionManager reactiveTransactionManager(ConnectionFactory connectionFactory) {
         return new R2dbcTransactionManager(connectionFactory);
     }
 }

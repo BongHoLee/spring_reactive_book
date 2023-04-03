@@ -1,7 +1,7 @@
-package com.bong.reactive.person.domain.cart;
+package com.bong.reactive.reactive2.domain.cart;
 
 
-import com.bong.reactive.person.domain.item.Item;
+import com.bong.reactive.reactive2.domain.item.Item;
 import lombok.Getter;
 
 @Getter
@@ -13,5 +13,4 @@ public class CartItem {
         this.item = item;
         this.quantity = quantity;
     }
-
 }

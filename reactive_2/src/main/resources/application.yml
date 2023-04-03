@@ -1,4 +1,21 @@
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bong
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-test-query: SELECT 1
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    database: mysql
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        format_sql: true
   r2dbc:
     host: localhost
     database: bong

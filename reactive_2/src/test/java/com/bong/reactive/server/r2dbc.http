@@ -1,3 +1,8 @@
 ### GET request with a header
 GET http://localhost:8080/posts
 
+### GET request with a header
+GET http://localhost:8080/posts/0243cbfb-1792-472c-b7a6-72c47b2aa0c2
+
+### GET request with a header
+GET http://localhost:8080/posts/title/my_first_post
